@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Csla.Configuration;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -39,8 +40,14 @@ namespace UnoApp
     /// <param name="e">Details about the launch request and process.</param>
     protected override void OnLaunched(LaunchActivatedEventArgs e)
     {
+      new CslaConfiguration()
+        .DataPortal().DefaultProxy(typeof(Shared.DataPortal.UnoHttpProxy).AssemblyQualifiedName,
+        //"http://localhost:47241/api/DataPortal");
+        "http://localhost:32769/api/DataPortal/PostAsync"); 
+        //"http://40.114.105.76/api/DataPortal/PostAsync");
+
 #if DEBUG
-            if (System.Diagnostics.Debugger.IsAttached)
+      if (System.Diagnostics.Debugger.IsAttached)
             {
                // this.DebugSettings.EnableFrameRateCounter = true;
             }

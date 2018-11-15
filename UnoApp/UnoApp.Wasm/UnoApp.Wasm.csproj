@@ -30,8 +30,12 @@
     <Content Include="LinkerConfig.xml" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Uno.UI" Version="1.41.1" />
+    <PackageReference Include="CSLA-Core" Version="4.9.0-R18110801" />
+    <PackageReference Include="Uno.UI" Version="1.42.0-dev.347" />
     <PackageReference Include="Uno.Wasm.Bootstrap" Version="1.0.0-dev.58" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\BusinessLibrary.Uno\BusinessLibrary.Uno.csproj" />
   </ItemGroup>
   <Import Project="..\UnoApp.Shared\UnoApp.Shared.projitems" Label="Shared" Condition="Exists('..\UnoApp.Shared\UnoApp.Shared.projitems')" />
 </Project>

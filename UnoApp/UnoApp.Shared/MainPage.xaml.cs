@@ -26,5 +26,11 @@ namespace UnoApp
     {
       this.InitializeComponent();
     }
+
+    private async void DoTest(object sender, RoutedEventArgs e)
+    {
+      var obj = await Csla.DataPortal.CreateAsync<BusinessLibrary.PersonEdit>();
+      this.output.Text = obj.Name;
+    }
   }
 }

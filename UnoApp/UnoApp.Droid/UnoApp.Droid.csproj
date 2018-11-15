@@ -54,7 +54,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Uno.UI" Version="1.41.1" />
+    <PackageReference Include="CSLA-Core">
+      <Version>4.9.0-R18110801</Version>
+    </PackageReference>
+    <PackageReference Include="Uno.UI" Version="1.42.0-dev.347" />
     <PackageReference Include="Uno.UniversalImageLoader" Version="1.9.32" />
   </ItemGroup>
   <ItemGroup>
@@ -78,6 +81,12 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Styles.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\BusinessLibrary.Uno\BusinessLibrary.Uno.csproj">
+      <Project>{596ca186-8478-4266-b94f-f19431d4a29e}</Project>
+      <Name>BusinessLibrary.Uno</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="..\UnoApp.Shared\UnoApp.Shared.projitems" Label="Shared" Condition="Exists('..\UnoApp.Shared\UnoApp.Shared.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
