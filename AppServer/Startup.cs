@@ -27,7 +27,7 @@ namespace AppServer
     {
       services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-      new CslaConfiguration().DataPortal().AuthenticationType("Windows");
+      new CslaConfiguration().DataPortal().AuthenticationType("Csla");
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

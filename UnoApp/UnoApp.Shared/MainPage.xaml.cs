@@ -29,8 +29,15 @@ namespace UnoApp
 
     private async void DoTest(object sender, RoutedEventArgs e)
     {
-      var obj = await Csla.DataPortal.CreateAsync<BusinessLibrary.PersonEdit>();
-      this.output.Text = obj.Name;
+      try
+      {
+        var obj = await Csla.DataPortal.CreateAsync<BusinessLibrary.PersonEdit>();
+        this.output.Text = obj.Name;
+      }
+      catch (Exception ex)
+      {
+        this.output.Text = ex.ToString();
+      }
     }
   }
 }

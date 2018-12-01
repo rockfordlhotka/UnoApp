@@ -42,9 +42,9 @@ namespace UnoApp
     {
       new CslaConfiguration()
         .DataPortal().DefaultProxy(typeof(Shared.DataPortal.UnoHttpProxy).AssemblyQualifiedName,
-        //"http://localhost:47241/api/DataPortal");
-        "http://localhost:32769/api/DataPortal/PostAsync"); 
-        //"http://40.114.105.76/api/DataPortal/PostAsync");
+          "http://localhost:32772/api/DataPortal");
+          //"http://40.114.105.76/api/DataPortal/PostAsync");
+      Csla.ApplicationContext.User = new Csla.Security.UnauthenticatedPrincipal();
 
 #if DEBUG
       if (System.Diagnostics.Debugger.IsAttached)

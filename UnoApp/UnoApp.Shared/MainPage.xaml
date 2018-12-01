@@ -7,10 +7,14 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-      <StackPanel>
-		    <TextBlock Name="output" Text="Hello, world !" Margin="20" FontSize="30" />
-        <Button Content="Click me" Click="DoTest"/>
-      </StackPanel>
-    </Grid>
+  <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+    <Button Content="Click me" Click="DoTest" Grid.Row="0"/>
+    <ScrollViewer Grid.Row="1">
+      <TextBlock Name="output" Text="Hello, world !" Margin="20" FontSize="30"/>
+    </ScrollViewer>
+  </Grid>
 </Page>
